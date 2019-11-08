@@ -5,7 +5,7 @@ import socket
 HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
 PORT = 65433        # Port to listen on (non-privileged ports are > 1023)
 
-with socket.create_server(addr) as s:
+with socket.create_server((HOST, PORT)) as s:
     conn, addr = s.accept()
     with conn:
         print('Connected by', (HOST, PORT))
