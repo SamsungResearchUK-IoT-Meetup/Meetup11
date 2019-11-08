@@ -14,5 +14,7 @@ for entry in sample_data:
 print("Without Walrus operator:")
 for entry in sample_data:
     title = entry.get("title")
+    print("Title is now: {}".format(title))
+    
     if title:
         print(f'Found title: "{title}"')
